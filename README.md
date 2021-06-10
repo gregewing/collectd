@@ -49,7 +49,7 @@ pruning stale volumes. I know some people will prefer to do things
 differently, but this suits me. (Suggestions for improvements 
 welcomed)</li> <li>For the 'df' plugin to provide data on mounts and 
 RAID volumes on the host, you may need to add a read-only bind mount to 
-this container. </li> <li>This build will be updated monthly to ensure 
+this container. </li> <li>This build will be updated approximately monthly to ensure 
 the Ubuntu build, and the software installed in the container are up to 
 date.</li> <li>If you would like to customise this container further, 
 use this <a 
