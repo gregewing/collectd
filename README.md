@@ -52,6 +52,5 @@ RAID volumes on the host, you may need to add a read-only bind mount to
 this container. </li> <li>This build will be updated approximately monthly to ensure 
 the Ubuntu build, and the software installed in the container are up to 
 date.</li> <li>If you would like to customise this container further, 
-use this <a 
-href="https://github.com/gregewing/collectd/blob/master/Dockerfile">Dockerfile</a>.</li>
+use this <a href="https://github.com/gregewing/collectd/blob/master/Dockerfile">Dockerfile</a>.</li>
 </ul>
