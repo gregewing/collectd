@@ -46,7 +46,7 @@ holding place for the collectd config file.  I've also bind-mounted the
 the file like this means the volume containing the config file does not 
 show up as unused in docker, which means it might be deleted when 
 pruning stale volumes. I know some people will prefer to do things 
-differently, but this suits me. (Suggestions for improvements 
+differently, but this suits me.  (Suggestions for improvements 
 welcomed)</li> <li>For the 'df' plugin to provide data on mounts and 
 RAID volumes on the host, you may need to add a read-only bind mount to 
 this container. </li> <li>This build will be updated approximately monthly to ensure 
