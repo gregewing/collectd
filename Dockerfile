@@ -7,6 +7,7 @@ ENV TZ=Europe/London DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         software-properties-common wget tar build-essential libtool autoconf automake pkg-config \
+        smartmontools collectd* libatasmart* libudev* libesmtp* lm-sensors \
         libssl-dev libxml2-dev libcurl4-openssl-dev librrd-dev libpcap-dev libjson-c-dev \
         libprotobuf-c-dev libprotobuf-dev protobuf-compiler libsnmp-dev libmysqlclient-dev libsqlite3-dev && \
     add-apt-repository universe && \
