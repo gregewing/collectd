@@ -1,13 +1,27 @@
 #!/bin/sh
+/usr/bin/docker login
 
+IMAGE="collectd"
+
+docker buildx create --name ${IMAGE} --driver docker-container --use
+
+echo "1"
+
+# Added missing backslash to line 9
 /usr/bin/docker buildx build \
-  --pull -t gregewing/collectd:latest \
-  --platform linux/amd64,linux/arm64,linux/arm/v7 \
-  /mnt/RAID/myDockers/gregewing_collectd \
+  --pull -t gregewing/${IMAGE}:latest \
+  --progress=tty \
+  --platform linux/amd64,linux/amd64/v3,linux/arm64,linux/arm/v7 \
+  /mnt/RAID/myDockers/gregewing_${IMAGE}/ \
   --push
+
+echo "2"
 
 docker buildx build \
   --pull \
   --platform linux/amd64 \
   --load \
-  -t gregewing/collectd:latest .
+  -t gregewing/${IMAGE}:latest .
+
+docker buildx rm ${IMAGE}
+
